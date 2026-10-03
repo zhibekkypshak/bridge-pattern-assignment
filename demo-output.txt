@@ -1,0 +1,32 @@
+T1: PASS
+Classes: Circle + VectorRenderer
+Result: VECTOR circle radius=2.0
+
+T2: PASS
+Classes: Circle + RasterRenderer
+Result: RASTER circle radius=2.0
+
+T3: PASS
+Classes: Square + VectorRenderer
+Result: VECTOR square side=3.0
+
+T4: PASS
+Classes: Square + RasterRenderer
+Result: RASTER square side=3.0
+
+T5: PASS
+Classes: Circle, VectorRenderer, RasterRenderer
+Same object: true
+ID and radius unchanged: true
+Before: VECTOR circle radius=2.0
+After: RASTER circle radius=2.0
+
+T6: PASS
+Classes: Circle + AsciiRenderer
+Result: ASCII circle radius=2.0
+
+T7: PASS
+Classes: Square + AsciiRenderer
+Result: ASCII square side=3.0
+
+SUMMARY: 7/7 PASS
