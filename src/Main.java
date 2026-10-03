@@ -3,6 +3,7 @@ import rendering.VectorRenderer;
 import shapes.Circle;
 import shapes.Shape;
 import shapes.Square;
+import rendering.AsciiRenderer;
 
 public class Main {
 
@@ -44,7 +45,19 @@ public class Main {
 
         passed += checkRuntimeSwitch();
 
-        System.out.println("SUMMARY: " + passed + "/5 PASS");
+        passed += checkResult(
+                "T6",
+                new Circle("circle-1", 2, new AsciiRenderer()),
+                "Circle + AsciiRenderer",
+                "ASCII circle radius=2.0");
+
+        passed += checkResult(
+                "T7",
+                new Square("square-1", 3, new AsciiRenderer()),
+                "Square + AsciiRenderer",
+                "ASCII square side=3.0");
+
+        System.out.println("SUMMARY: " + passed + "/7 PASS");
     }
 
     private static int checkResult(
